@@ -10,7 +10,7 @@ public class Dept implements Serializable {
 	private String id;
 	private Set<User> users = new HashSet<User>(0);   //部门与用户 一对多
 	private String deptName;   //department name
-	private Dept parent;  //parent dept, 自关联   子部门与父部门: 多对一
+	private Dept parent;       //parent dept, 自关联   子部门与父部门: 多对一
 	private Integer state;   //状态  1代表启用   0代表停用
 	public String getId() {
 		return id;
