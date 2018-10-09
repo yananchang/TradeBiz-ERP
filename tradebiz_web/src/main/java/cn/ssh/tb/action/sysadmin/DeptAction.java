@@ -43,11 +43,10 @@ public class DeptAction extends BaseAction implements ModelDriven<Dept> {
 		page = deptService.findPage("from Dept", page, Dept.class, null);
 		
 		//设置分页的url地址
-		page.setUrl("deptAction_list");  //re-enter this method to re-query the page
+		page.setUrl("deptAction_list");  //re-enter this method to re-query for the new page
 		
 		//将page对象压入到值栈的栈顶, 这样, 从值栈取出page对象时比较方便, 以后user什么的也会压栈顶, 所以可以抽取成方法
 		super.push(page);
-		
 		
 		return "list";
 	}

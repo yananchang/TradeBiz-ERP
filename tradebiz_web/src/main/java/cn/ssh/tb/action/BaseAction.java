@@ -58,7 +58,7 @@ public class BaseAction extends ActionSupport implements RequestAware, SessionAw
 	}
 	
 	/**
-	 * 将对象放入值栈的栈顶
+	 * push object to the top of the valueStack
 	 */
 	public void push(Object obj) {
 		ActionContext.getContext().getValueStack().push(obj);

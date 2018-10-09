@@ -75,15 +75,15 @@
 	<thead>
 	<tr>
 		<td class="tableHeader"><input type="checkbox" name="selid" onclick="checkAll('id',this)"></td>
-		<td class="tableHeader">序号</td>
-		<td class="tableHeader">编号</td>
-		<td class="tableHeader">上级</td>
-		<td class="tableHeader">名称</td>
+		<td class="tableHeader">OrderNum</td>
+		<td class="tableHeader">Dept ID</td>
+		<td class="tableHeader">ParentDept</td>
+		<td class="tableHeader">DeptName</td>
 	</tr>
 	</thead>
 	<tbody class="tableBody" >
     ${links }
-	                    <!-- results 是栈顶的page的属性        所有的EL表达式, 背后都是调用的对应的get方法-->
+	          <!-- results 是栈顶的page的属性        所有的EL表达式, 背后都是调用的对应的get方法-->
 	<c:forEach items="${results }" var="dept"  varStatus="st">
 		<tr class="odd" onmouseover="this.className='highlight'" onmouseout="this.className='odd'" >
 			<td><input type="checkbox" name="id" value="${dept.id }"/></td>
