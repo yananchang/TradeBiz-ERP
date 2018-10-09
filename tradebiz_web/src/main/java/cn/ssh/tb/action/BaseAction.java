@@ -13,10 +13,9 @@ import com.opensymphony.xwork2.ActionSupport;
 import cn.ssh.tb.domain.User;
 import cn.ssh.tb.utils.SysConstant;
 
-/**
-
- *
- *
+/** Why BaseAction?
+ * 1. In case of future possible framework updates, only need to modify BaseAction
+ * 2. We could extract common methods into BaseAction
  *
  */
 

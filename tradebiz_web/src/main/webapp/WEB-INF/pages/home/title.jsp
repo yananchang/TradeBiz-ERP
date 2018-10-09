@@ -214,7 +214,7 @@
 			    	<div class="mavMeau_top"></div>
 			    	<div id="mask">
 <div id="menuContent">
-	 <span id="topmenu" onclick="toModule('home');">系统首页</span><span id="tm_separator"></span>
+	<span id="topmenu" onclick="toModule('home');">系统首页</span><span id="tm_separator"></span>
 	<span id="topmenu" onclick="toModule('cargo');">货运管理</span><span id="tm_separator"></span>
 	<span id="topmenu" onclick="toModule('stat');">统计分析</span><span id="tm_separator"></span>
 	<span id="topmenu" onclick="toModule('baseinfo');">基础信息</span><span id="tm_separator"></span>

@@ -36,4 +36,4 @@
 		
 		
 	</session-factory>
-	</hibernate-configuration>
+</hibernate-configuration>

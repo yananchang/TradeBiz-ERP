@@ -8,10 +8,10 @@ import java.util.Set;
 public class Dept implements Serializable {
 
 	private String id;
-	private Set<User> users = new HashSet<User>(0);   //部门与用户 一对多
+	private Set<User> users = new HashSet<User>(0);   //dept & users: one to many
 	private String deptName;   //department name
-	private Dept parent;        //parent dept, 自关联   子部门与父部门: 多对一
-	private Integer state;   //状态  1代表启用   0代表停用
+	private Dept parent;        //parent dept, self-related   sub-dept & parent-dept: many to one
+	private Integer state;     //状态  1:activated   0:deactivated
 	public String getId() {
 		return id;
 	}

@@ -2,21 +2,22 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
 
+	<!-- each of ssh has to be configured here -->
     <!--spring配置文件的加载的监听 器       加载Spring的配置文件-->
+    <listener>
+    	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener> 
     <context-param>
     	<param-name>contextConfigLocation</param-name>
     	<param-value>classpath:applicationContext.xml</param-value>
-
     </context-param> 
     
-    <listener>
-    	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-
-    </listener> 
+    
     <!--2.懒加载   OpenSessionInviewFilter   noSession or session is closed-->
     <filter>
     	<filter-name>openSessionInViewFilter</filter-name>
     	<filter-class>org.springframework.orm.hibernate5.support.OpenSessionInViewFilter</filter-class>
+    	
     	<init-param>
     		<param-name>singleSession</param-name>
     		<param-value>true</param-value>
@@ -29,7 +30,6 @@
     <filter-mapping>
     	<filter-name>openSessionInViewFilter</filter-name>
     	<url-pattern>/*</url-pattern>
-
     </filter-mapping> 
     
    <!-- Shiro Security filter  filter-name这个名字的值将来还会在spring中用到  -->

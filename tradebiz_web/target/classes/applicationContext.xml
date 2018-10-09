@@ -28,12 +28,12 @@
 		<property name="user" value="itheima" />
 		<property name="password" value="itheima" />
 	</bean>
+	
 	<!-- 2.sessionFactory-->
 	<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
 		<property name="configLocation" value="classpath:hibernate.cfg.xml"></property>
 	</bean>
-
 	
 	
 	<!--Shiro安全框架产生代理子类的方式： 使用cglib方式-->
