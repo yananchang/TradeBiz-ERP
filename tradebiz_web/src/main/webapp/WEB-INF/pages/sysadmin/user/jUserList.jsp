@@ -47,11 +47,11 @@
 <div id="innerMenubar">
   <div id="navMenubar">
 <ul>
-<li id="view"><a href="javascript:toView()">查看</a></li>
-<li id="new"><a href="#" onclick="formSubmit('userAction_tocreate','_self');this.blur();">新增</a></li>
-<li id="update"><a href="#" onclick="javascript:toUpdate()">修改</a></li>
-<li id="update"><a href="#" onclick="formSubmit('userAction_torole','_self');this.blur();">角色</a></li>
-<li id="delete"><a href="#" onclick="formSubmit('userAction_delete','_self');this.blur();">删除</a></li>
+<li id="view"><a href="javascript:toView()">View</a></li>
+<li id="new"><a href="#" onclick="formSubmit('userAction_tocreate','_self');this.blur();">Add</a></li>
+<li id="update"><a href="#" onclick="javascript:toUpdate()">Modify</a></li>
+<li id="update"><a href="#" onclick="formSubmit('userAction_torole','_self');this.blur();">Role</a></li>
+<li id="delete"><a href="#" onclick="formSubmit('userAction_delete','_self');this.blur();">Del</a></li>
 </ul>
   </div>
 </div>
@@ -75,9 +75,9 @@
 	<thead>
 	<tr>
 		<td class="tableHeader"><input type="checkbox" name="selid" onclick="checkAll('id',this)"></td>
-		<td class="tableHeader">序号</td>
-		<td class="tableHeader">用户名</td>
-		<td class="tableHeader">状态</td>
+		<td class="tableHeader">ID</td>
+		<td class="tableHeader">UserName</td>
+		<td class="tableHeader">Status</td>
 	</tr>
 	</thead>
 	<tbody class="tableBody" >

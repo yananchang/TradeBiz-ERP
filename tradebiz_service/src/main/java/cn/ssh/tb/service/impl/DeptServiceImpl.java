@@ -47,14 +47,13 @@ public class DeptServiceImpl implements DeptService {
 		List<Dept> list = baseDao.find(hql, Dept.class, new Object[]{id});   //查询出当前父部门下的子部门列表
 		if(list != null && list.size()>0) {
 			for(Dept dept: list) {
-				deleteById(Dept.class, dept.getId());   //递归调用
+				deleteById(Dept.class, dept.getId());   //recursive invoke
 			}
 		}
-		baseDao.deleteById(entityClass, id);    //删除父部门
+		baseDao.deleteById(entityClass, id);    //delete parent dept
 	}
 
 	public void delete(Class<Dept> entityClass, Serializable[] ids) {
-		
 		for(Serializable id: ids) {
 			this.deleteById(Dept.class, id);
 		}

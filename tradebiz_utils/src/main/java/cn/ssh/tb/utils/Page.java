@@ -97,11 +97,11 @@ public class Page<T> {
 		sBuf.append("<input type=\"hidden\" id=\"page.pageNo\" name=\"page.pageNo\" value=\"").append(curPageNo).append("\">");		//分页参数：当前页隐藏域
 
 		
-		sBuf.append("&nbsp;第").append(curPageNo).append("页 / 共").append(this.totalPage).append("页&nbsp;");
-		sBuf.append("&nbsp;总共").append(this.totalRecord).append("条记录 每页").append(this.pageSize).append("条记录&nbsp;");
+		sBuf.append("&nbsp;the").append(curPageNo).append("page / total").append(this.totalPage).append("pages&nbsp;");
+		sBuf.append("&nbsp;total").append(this.totalRecord).append("records each page").append(this.pageSize).append("records&nbsp;");
 		
 		sBuf.append("<a href=\"#").append("\" onclick=\"setPageNo(1);formSubmit('").append(url).append("','_self')");
-		sBuf.append("\">[首页]");
+		sBuf.append("\">[First]");
 		sBuf.append("</a>&nbsp;");
 		
 		if(this.pageNo<=1){
@@ -110,7 +110,7 @@ public class Page<T> {
 			curPageNo = this.pageNo - 1;
 		}
 		sBuf.append("<a href=\"#").append("\" onclick=\"setPageNo(").append(curPageNo).append(");formSubmit('").append(url).append("','_self')");
-		sBuf.append("\">[上一页]");
+		sBuf.append("\">[previous]");
 		sBuf.append("</a>&nbsp;");
 			
 		
@@ -120,11 +120,11 @@ public class Page<T> {
 			curPageNo = this.pageNo + 1;
 		}	
 		sBuf.append("<a href=\"#").append("\" onclick=\"setPageNo(").append(curPageNo).append(");formSubmit('").append(url).append("','_self')");
-		sBuf.append("\">[下一页]");
+		sBuf.append("\">[next]");
 		sBuf.append("</a>&nbsp;");
 			
 		sBuf.append("<a href=\"#").append("\" onclick=\"setPageNo(").append(this.totalPage).append(");formSubmit('").append(url).append("','_self')");
-		sBuf.append("\">[末页]");
+		sBuf.append("\">[last]");
 		sBuf.append("</a>&nbsp;");
 		
 		sBuf.append("</span>");

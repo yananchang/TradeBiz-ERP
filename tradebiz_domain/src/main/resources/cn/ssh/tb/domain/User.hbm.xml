@@ -4,19 +4,20 @@
     "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
     
     
-<hibernate-mapping package="cn.ssh.tb.domain">     <!-- 以下的dynamic-insert和update, 设置为true, 意即是否让数据库中的默认值起作用 -->
+<hibernate-mapping package="cn.ssh.tb.domain">     <!-- 以下的dynamic-insert和update, 设置为true, 意即是否让数据库中的默认值起作用,让默认值自动加入 -->
 	<class name="User" table="USER_P" dynamic-insert="true" dynamic-update="true">
 		<id name="id" column="USER_ID">
-			<!--hibernate主键生成策	略：native, increment,sequence,uuid,assigned,identity  -->
+			<!--hibernate主键生成策略：native, increment,sequence,uuid,assigned,identity  -->
+			<!-- here is set "assigned", because there is userinfo, one-to-one, we want them have same id -->
 			<generator class="assigned"></generator>
 		</id>
-		<property name="userName" column="USER_NAME" />
-		<property name="password" column="PASSWORD" />
-		<property name="state" column="STATE" />
-		<property name="createBy" column="CREATE_BY" />
+		<property name="userName"   column="USER_NAME" />
+		<property name="password"   column="PASSWORD" />
+		<property name="state"      column="STATE" />
+		<property name="createBy"   column="CREATE_BY" />
 		<property name="createDept" column="CREATE_DEPT" />
 		<property name="createTime" column="CREATE_TIME" />
-		<property name="updateBy" column="UPDATE_BY" />
+		<property name="updateBy"   column="UPDATE_BY" />
 		<property name="updateTime" column="UPDATE_TIME" />
 		
 		<!-- private Dept dept; // 用户与部门  多对一 -->

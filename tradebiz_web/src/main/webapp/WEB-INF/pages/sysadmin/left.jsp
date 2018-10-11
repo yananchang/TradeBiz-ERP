@@ -20,7 +20,7 @@
         <div class="panel">
         <div class="panel_icon"><img src="${ctx}/skin/default/images/icon/user1_lock.png"/></div>
         <div class="panel-header">
-        <div class="panel-title">权限管理</div>
+        <div class="panel-title">Authority Mgmt</div>
         <div class="panel-content">
 			  <%-- <ul>
 				<li><a href="${ctx}/sysadmin/deptAction_list" onclick="linkHighlighted(this)" target="main" id="aa_1">部门管理</a></li>

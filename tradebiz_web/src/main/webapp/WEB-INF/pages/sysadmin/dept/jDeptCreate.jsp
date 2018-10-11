@@ -31,22 +31,22 @@
     <div>
 		<table class="commonTable" cellspacing="1">
 	        <tr>
-	            <td class="columnTitle">上级部门：</td>
+	            <td class="columnTitle">Parent dept：</td>
 	            <td class="tableContent">
 	            <!-- s:select是struts的下拉框标签
-	            	name属性代表下拉框的名称
+	            	name: 代表下拉框的名称
 	            	list: 绑定的集合名  List<Dept>
-	            	headerKey: 代表首选项的value属性
+	            	headerKey:   代表首选项的value属性
 	            	headerValue: 代表首选项的文本
-	            	listKey:      相当于<option value="${id }">
-	            	listValue:   代表中间的文本,
+	            	listKey:     相当于<option value="${id }"> 中的value
+	            	listValue:   代表中间所显示的文本 
 	             -->
 	            	<s:select name="parent.id" list="#deptList" headerKey="" headerValue="--请选择--" 
 	            	listKey="id" listValue="deptName"></s:select>
 	            </td>
 	        </tr>		
 	        <tr>
-	            <td class="columnTitle">部门名称：</td>
+	            <td class="columnTitle">Dept name：</td>
 	            <td class="tableContent"><input type="text" name="deptName" value=""/></td>
 	        </tr>		
 		</table>

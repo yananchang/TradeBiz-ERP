@@ -74,7 +74,7 @@ public class DeptAction extends BaseAction implements ModelDriven<Dept> {
 		//调用业务方法
 		List<Dept> deptList = deptService.find("from Dept where state=1", Dept.class, null);
 		
-		//将查询的结果放入值栈
+		//将查询的结果放入值栈  放入的是值栈中的contextmap中;
 		super.put("deptList", deptList);
 		//跳页面
 		return "tocreate";
@@ -89,7 +89,7 @@ public class DeptAction extends BaseAction implements ModelDriven<Dept> {
 	 *     deptName
 	 */
 	public String insert() throws Exception {
-		//1.调用业务方法,直线保存
+		//1.调用业务方法保存
 		deptService.saveOrUpdate(model); //并不是所有属性都有值, 只有以上两个值
 		
 		//跳页面
@@ -101,7 +101,7 @@ public class DeptAction extends BaseAction implements ModelDriven<Dept> {
 	 */
 	public String toupdate() throws Exception {
 		//1.根据id, 得到一个对象
-		Dept obj = deptService.get(Dept.class, model.getId());
+		Dept obj = deptService.get(Dept.class, model.getId());   
 		
 		//2.将对象放入值栈中
 		super.push(obj);
@@ -109,7 +109,7 @@ public class DeptAction extends BaseAction implements ModelDriven<Dept> {
 		//3.查询父部门
 		List<Dept> deptList = deptService.find("from Dept where state=1", Dept.class, null);
 		
-		//4.将查询的结果放入值栈, 它放在context区域中
+		//4.将查询的结果放入值栈, 放在context区域中
 		super.put("deptList", deptList);
 		
 		//5.跳页面
@@ -123,7 +123,7 @@ public class DeptAction extends BaseAction implements ModelDriven<Dept> {
 		//调用业务    参数不能直接放model, 因为该页面只有3个值, 如果该部门对象之前有其他值, 那么就都丢掉了
 		Dept obj = deptService.get(Dept.class, model.getId());  //根据id, 得到一个数据库中保存的部门对象
 		
-		//2.设置修改了的属性 (没改的属性沿用之前的)
+		//2.设置已被修改了的属性 (没改的属性沿用之前的)
 		obj.setParent(model.getParent());
 		obj.setDeptName(model.getDeptName());
 		
@@ -140,9 +140,9 @@ public class DeptAction extends BaseAction implements ModelDriven<Dept> {
 	 * 
 	 * model     id: 只是String类型
 	 * 		问题: 具有同名框(这里是id)的一组值如何封装数据?
-	 * 如果server端是string类型: 封装没问题: struts2会用逗号+空格来连接, 拼接到一起;
+	 * 如果server端是string类型, 封装没问题: struts2会默认用"逗号+空格"来连接, 拼接到一起;
 	 * 如果               是Integer,Float,Double,Date类型:   struts2只会保留最后一个值;
-	 *      那么如何保存多个integer? 
+	 * 那么如何保存多个integer? 用array/list接, 如下:
 	 *            Integer[] id;  {100,200,300}  其他数字类型同理;
 	 */
 	public String delete() throws Exception {

@@ -54,7 +54,7 @@ public class BaseDaoImpl implements BaseDao{
 		}
 		
 		//查询一次，获取记录总数     这里不是很好,size()查出所有,效率慢, 应该用select count(*)
-		int count = query.list().size();   //可以优化 "select count(*)" + hql
+		int count = query.list().size();   //to be optimized: "select count(*)" + hql
 		page.setTotalRecord(count);
 		
 		//设置分页                    设置分页就是两件事: 1. 总记录数  2. 当前页的记录

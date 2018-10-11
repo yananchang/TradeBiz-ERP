@@ -11,10 +11,10 @@
 		<property name="remark" column="REMARK" />
 		<property name="orderNo" column="ORDER_NO" />
 		
-		<property name="createBy" column="CREATE_BY" />
+		<property name="createBy"   column="CREATE_BY" />
 		<property name="createDept" column="CREATE_DEPT" />
 		<property name="createTime" column="CREATE_TIME" />
-		<property name="updateBy" column="UPDATE_BY" />
+		<property name="updateBy"   column="UPDATE_BY" />
 		<property name="updateTime" column="UPDATE_TIME" />
 
 		<!-- private Set<User> users = new HashSet<User>(0); //角色与用户 多对多 -->

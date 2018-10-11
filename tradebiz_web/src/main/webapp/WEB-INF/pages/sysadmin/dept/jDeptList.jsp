@@ -26,7 +26,7 @@
 	    	 if(isOnlyChecked()){
 	    		 formSubmit('deptAction_toview','_self');
 	    	 }else{
-	    		 alert("请先选择一项并且只能选择一项，再进行操作！");
+	    		 alert("Pls select one item and only one before further operation!");
 	    	 }
 	     }
 	     //实现更新
@@ -34,7 +34,7 @@
 	    	 if(isOnlyChecked()){
 	    		 formSubmit('deptAction_toupdate','_self');
 	    	 }else{
-	    		 alert("请先选择一项并且只能选择一项，再进行操作！");
+	    		 alert("Pls select one item and only one before further operation!");
 	    	 }
 	     }
 	</script>
@@ -48,10 +48,10 @@
 <div id="innerMenubar">
   <div id="navMenubar">
 <ul>
-<li id="view"><a href="#" onclick="javascript:toView()">查看</a></li>
-<li id="new"><a href="#" onclick="formSubmit('deptAction_tocreate','_self');this.blur();">新增</a></li>
-<li id="update"><a href="#" onclick="javascript:toUpdate()">修改</a></li>
-<li id="delete"><a href="#" onclick="formSubmit('deptAction_delete','_self');this.blur();">删除</a></li>
+<li id="view"><a href="#" onclick="javascript:toView()">View</a></li>
+<li id="new"><a href="#" onclick="formSubmit('deptAction_tocreate','_self');this.blur();">Add</a></li>
+<li id="update"><a href="#" onclick="javascript:toUpdate()">Modify</a></li>
+<li id="delete"><a href="#" onclick="formSubmit('deptAction_delete','_self');this.blur();">Delete</a></li>
 </ul>
   </div>
 </div>
@@ -62,7 +62,7 @@
   <div class="textbox-header">
   <div class="textbox-inner-header">
   <div class="textbox-title">
-    部门列表
+  		Dept List
   </div> 
   </div>
   </div>
