@@ -51,7 +51,7 @@
 	</bean>
 	
 	
-	<!--Shiro安全框架产生代理子类的方式： 使用cglib方式-->
+	<!--Shiro安全框架产生代理子类的方式： 使用cglib方式  必须放在事务管理器之前-->
 	<aop:aspectj-autoproxy proxy-target-class="true" />
 	
 	<!-- 3.事务管理器-->

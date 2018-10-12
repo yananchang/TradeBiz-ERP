@@ -39,7 +39,7 @@
 	<!-- 设置密码加密策略 md5hash -->
 	<bean id="passwordMatcher" class="cn.ssh.tb.shiro.CustomCredentialsMatcher"/>
 
-    <!-- filter-name这个名字的值来自于web.xml中filter的名字      必须一样-->
+    <!-- filter-name这个名字的值来自于web.xml中filter的名字, 必须一样-->
     <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
         <property name="securityManager" ref="securityManager"/>
         <!--登录页面  -->
@@ -49,7 +49,7 @@
         <property name="filterChainDefinitions">
             <!-- /**代表下面的多级目录也过滤                   anon:说明可以匿名访问     /**当前及所有子文件夹  -->
             <value>
-				/index.jsp* = anon            
+				/index.jsp* = anon       <!-- 等号右边的都是过滤器的简写 -->     
 				/home* = anon
 				/sysadmin/login/login.jsp* = anon
 				/sysadmin/login/logout.jsp* = anon
@@ -65,7 +65,7 @@
 				/ufiles/** = anon
 				/validator/** = anon
 				/resource/** = anon
-				/** = authc
+				/** = authc    <!-- 其他的资源都不能匿名访问 -->
 				/*.* = authc
             </value>
         </property>

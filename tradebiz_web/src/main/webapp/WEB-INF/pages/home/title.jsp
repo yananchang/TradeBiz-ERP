@@ -214,31 +214,31 @@
 			    	<div class="mavMeau_top"></div>
 			    	<div id="mask">
 <div id="menuContent">
-	<span id="topmenu" onclick="toModule('home');">系统首页</span><span id="tm_separator"></span>
-	<span id="topmenu" onclick="toModule('cargo');">货运管理</span><span id="tm_separator"></span>
-	<span id="topmenu" onclick="toModule('stat');">统计分析</span><span id="tm_separator"></span>
-	<span id="topmenu" onclick="toModule('baseinfo');">基础信息</span><span id="tm_separator"></span>
-	<span id="topmenu" onclick="toModule('sysadmin');">系统管理</span>  
+	<span id="topmenu" onclick="toModule('home');">Main</span><span id="tm_separator"></span>
+	<span id="topmenu" onclick="toModule('cargo');">Cargo</span><span id="tm_separator"></span>
+	<span id="topmenu" onclick="toModule('stat');">Stat</span><span id="tm_separator"></span>
+	<span id="topmenu" onclick="toModule('baseinfo');">Basics</span><span id="tm_separator"></span>
+	<span id="topmenu" onclick="toModule('sysadmin');">Mgmt</span>  
 	 
 	 
 	 <!-- 当jsp页面碰到shiro标签时就执行AuthRealm中授权方法 -->
 	 <shiro:hasPermission name="系统首页">
-	<span id="topmenu" onclick="toModule('home');">系统首页</span><span id="tm_separator"></span>
+	<span id="topmenu" onclick="toModule('home');">系统首页main</span><span id="tm_separator"></span>
 	</shiro:hasPermission>
 	<shiro:hasPermission name="货运管理">
-		<span id="topmenu" onclick="toModule('cargo');">货运管理</span><span id="tm_separator"></span>
+		<span id="topmenu" onclick="toModule('cargo');">货运管理cargo</span><span id="tm_separator"></span>
 	</shiro:hasPermission>
 	<shiro:hasPermission name="统计分析">
-	<span id="topmenu" onclick="toModule('stat');">统计分析</span><span id="tm_separator"></span>
+	<span id="topmenu" onclick="toModule('stat');">统计分析stat</span><span id="tm_separator"></span>
 	</shiro:hasPermission>
 	<shiro:hasPermission name="基础信息">
-	<span id="topmenu" onclick="toModule('baseinfo');">基础信息</span><span id="tm_separator"></span>
+	<span id="topmenu" onclick="toModule('baseinfo');">基础信息basic</span><span id="tm_separator"></span>
 	</shiro:hasPermission>
 	<shiro:hasPermission name="系统管理">
-	<span id="topmenu" onclick="toModule('sysadmin');">系统管理</span>
+	<span id="topmenu" onclick="toModule('sysadmin');">系统管理mgmt</span>
 	</shiro:hasPermission>
 	<shiro:hasPermission name="流程管理">
-	<span id="topmenu" onclick="toModule('activiti');">流程管理</span>
+	<span id="topmenu" onclick="toModule('activiti');">流程管理process</span>
 	</shiro:hasPermission> 
 
 </div>

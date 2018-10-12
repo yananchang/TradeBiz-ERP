@@ -14,11 +14,11 @@
 <div id="innerMenubar">
   <div id="navMenubar">
 <ul>
-<li id="view"><a href="#" onclick="formSubmit('roleAction_toview','_self');this.blur();">查看</a></li>
-<li id="new"><a href="#" onclick="formSubmit('roleAction_tocreate','_self');this.blur();">新增</a></li>
-<li id="update"><a href="#" onclick="formSubmit('roleAction_toupdate','_self');this.blur();">修改</a></li>
-<li id="delete"><a href="#" onclick="formSubmit('roleAction_delete','_self');this.blur();">删除</a></li>
-<li id="new"><a href="#" onclick="formSubmit('roleAction_tomodule','_self');this.blur();" title="分配权限">权限</a></li>
+<li id="view"><a href="#" onclick="formSubmit('roleAction_toview','_self');this.blur();">View</a></li>
+<li id="new"><a href="#" onclick="formSubmit('roleAction_tocreate','_self');this.blur();">Add</a></li>
+<li id="update"><a href="#" onclick="formSubmit('roleAction_toupdate','_self');this.blur();">Modify</a></li>
+<li id="delete"><a href="#" onclick="formSubmit('roleAction_delete','_self');this.blur();">Del</a></li>
+<li id="new"><a href="#" onclick="formSubmit('roleAction_tomodule','_self');this.blur();" title="分配权限">Auth</a></li>
 </ul>
   </div>
 </div>
@@ -29,7 +29,7 @@
   <div class="textbox-header">
   <div class="textbox-inner-header">
   <div class="textbox-title">
-    角色列表
+    Role List
   </div> 
   </div>
   </div>
@@ -42,10 +42,10 @@
 	<thead>
 	<tr>
 		<td class="tableHeader"><input type="checkbox" name="selid" onclick="checkAll('id',this)"></td>
-		<td class="tableHeader">序号</td>
-		<td class="tableHeader">编号</td>
-		<td class="tableHeader">名称</td>
-		<td class="tableHeader">说明</td>
+		<td class="tableHeader">No</td>
+		<td class="tableHeader">ID</td>
+		<td class="tableHeader">Name</td>
+		<td class="tableHeader">Remark</td>
 	</tr>
 	</thead>
 	<tbody class="tableBody" >

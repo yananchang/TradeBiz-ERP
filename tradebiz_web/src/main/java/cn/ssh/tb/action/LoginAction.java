@@ -51,7 +51,7 @@ public class LoginAction extends BaseAction {
 			//4.将用户放入session域中
 			session.put(SysConstant.CURRENT_USER_INFO, user);
 			
-		} catch (Exception e) {
+		} catch (Exception e) {  //shiro的验证失败, 就会报异常
 			e.printStackTrace();
 			request.put("errorInfo", "Sorry, ID or password is invalid!");
 			return "login";

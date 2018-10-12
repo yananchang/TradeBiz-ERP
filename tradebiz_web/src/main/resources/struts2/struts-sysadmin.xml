@@ -27,8 +27,8 @@
 		</action>
 		
 		<action name="roleAction_*" class="roleAction" method="{1}">
-			<result name="list">/WEB-INF/pages/sysadmin/role/jRoleList.jsp</result>
-			<result name="toview">/WEB-INF/pages/sysadmin/role/jRoleView.jsp</result>
+			<result name="list"    >/WEB-INF/pages/sysadmin/role/jRoleList.jsp</result>
+			<result name="toview"  >/WEB-INF/pages/sysadmin/role/jRoleView.jsp</result>
 			<result name="tocreate">/WEB-INF/pages/sysadmin/role/jRoleCreate.jsp</result>
 			<result name="toupdate">/WEB-INF/pages/sysadmin/role/jRoleUpdate.jsp</result>
 			<result name="tomodule">/WEB-INF/pages/sysadmin/role/jRoleModule.jsp</result>

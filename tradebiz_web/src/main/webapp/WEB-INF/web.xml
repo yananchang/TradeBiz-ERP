@@ -33,7 +33,7 @@
     </filter-mapping> 
     
    <!-- Shiro Security filter  filter-name这个名字的值将来还会在spring中用到  -->
-    <!-- 注意：shiro的filter必须在struts2的filter之前，否则action无法创建  -->
+   <!-- 注意：shiro的filter必须在struts2的filter之前，否则action无法创建  -->
     
     <filter>
         <filter-name>shiroFilter</filter-name>

@@ -3,13 +3,12 @@ package cn.ssh.tb.utils;
 import org.apache.shiro.crypto.hash.Md5Hash;
 
 /**
- * @Description:
- * @Author:			传智宋江
- * @Company:		http://java.itcast.cn
- * @CreateDate:		2014年12月27日
+ * 
+ * @author Yanan Chang
+ *
  */
 public class Encrypt {
-	/*
+	/*  Shiro提供的;
 	 * 散列算法一般用于生成数据的摘要信息，是一种不可逆的算法，一般适合存储密码之类的数据，
 	 * 常见的散列算法如MD5、SHA等。一般进行散列时最好提供一个salt（盐），比如加密密码“admin”，
 	 * 产生的散列值是“21232f297a57a5a743894a0e4a801fc3”，

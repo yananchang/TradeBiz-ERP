@@ -27,13 +27,11 @@
 		<property name="roleService" ref="roleService"></property>
 	</bean>
 	
-	<!-- 角色的Action -->
 	<bean id="roleAction"  class="cn.ssh.tb.action.sysadmin.RoleAction" scope="prototype">
 		<property name="roleService" ref="roleService"></property>
 		<property name="moduleService" ref="moduleService"></property>
 	</bean>
 	
-	<!-- 模块的Action -->
 	<bean id="moduleAction"  class="cn.ssh.tb.action.sysadmin.ModuleAction" scope="prototype">
 		<property name="moduleService" ref="moduleService"></property>
 	</bean>

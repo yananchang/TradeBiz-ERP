@@ -2,11 +2,15 @@
 <html>
 <head>
 <title>TradeBiz Management Platform</title>
+<!-- 比如: 点击"部门管理"应该进入DeptAction_list,但是很多过滤器起作用, 规定:不行就往登录页面跳; 
+     和当前地址不相同, 应该要当前的顶层框架集变成要访问的地址; -->
 <script type="text/javascript">
 	if(self.location != top.location){
 		top.location=self.location;
 	}
+	
 </script>
+
 </head>
 <frameset rows="125,*" name="topFrameset" border="0">
 	<frame name="top_frame" scrolling="no"  target="middleFrameSet" src="homeAction_title">	

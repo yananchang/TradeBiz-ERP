@@ -14,10 +14,10 @@
 <div id="innerMenubar">
   <div id="navMenubar">
 <ul>
-<li id="view"><a href="#" onclick="formSubmit('moduleAction_toview','_self');this.blur();">查看</a></li>
-<li id="new"><a href="#" onclick="formSubmit('moduleAction_tocreate','_self');this.blur();">新增</a></li>
-<li id="update"><a href="#" onclick="formSubmit('moduleAction_toupdate','_self');this.blur();">修改</a></li>
-<li id="delete"><a href="#" onclick="formSubmit('moduleAction_delete','_self');this.blur();">删除</a></li>
+<li id="view"><a href="#" onclick="formSubmit('moduleAction_toview','_self');this.blur();">View</a></li>
+<li id="new"><a href="#" onclick="formSubmit('moduleAction_tocreate','_self');this.blur();">Add</a></li>
+<li id="update"><a href="#" onclick="formSubmit('moduleAction_toupdate','_self');this.blur();">Mod</a></li>
+<li id="delete"><a href="#" onclick="formSubmit('moduleAction_delete','_self');this.blur();">Del</a></li>
 </ul>
   </div>
 </div>
@@ -28,7 +28,7 @@
   <div class="textbox-header">
   <div class="textbox-inner-header">
   <div class="textbox-title">
-    模块列表
+    Module List
   </div> 
   </div>
   </div>
@@ -41,14 +41,14 @@
 	<thead>
 	<tr>
 		<td class="tableHeader"><input type="checkbox" name="selid" onclick="checkAll('id',this)"></td>
-		<td class="tableHeader">序号</td>
-		<td class="tableHeader">模块名</td>
-		<td class="tableHeader">层数</td>
-		<td class="tableHeader">权限标识</td>
-		<td class="tableHeader">链接</td>
-		<td class="tableHeader">类型</td>
-		<td class="tableHeader">从属</td>
-		<td class="tableHeader">状态</td>
+		<td class="tableHeader">No</td>
+		<td class="tableHeader">Name</td>
+		<td class="tableHeader">Layer #</td>
+		<td class="tableHeader">Authority</td>
+		<td class="tableHeader">Link</td>
+		<td class="tableHeader">Type</td>
+		<td class="tableHeader">Belongs to</td>
+		<td class="tableHeader">Status</td>
 	</tr>
 	</thead>
 	<tbody class="tableBody" >

@@ -27,7 +27,7 @@ public class AuthRealm extends AuthorizingRealm{
 		this.userService = userService;
 	}
 
-	//授权方法   当jsp页面出现Shiro标签时, 就会执行授权方法
+	//授权方法   当jsp页面出现Shiro标签时, 就会执行授权方法       参数是用户的集合
 	protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection pc) {
 		System.out.println("authorizing...");
 		//查出当前用户的所有权限的字符串
@@ -45,7 +45,7 @@ public class AuthRealm extends AuthorizingRealm{
 		
 		SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
 		info.addStringPermissions(permissions);   //添加用户的权限(即用户的模块)
-		return null;
+		return info;
 	}
 
 	//认证方法   token代表用户在界面输入的用户名和密码,  该方法是根据用户名, 在db中拿到对应的对象, 并封装返回
