@@ -119,7 +119,7 @@ public class UserAction extends BaseAction implements ModelDriven<User> {
 	 */
 	public String toupdate() throws Exception {
 		//1.根据id, 得到一个对象
-		User obj = userService.get(User.class, model.getId());
+		User obj = userService.get(User.class, model.getId());    
 		
 		//2.将对象放入值栈中
 		super.push(obj);
