@@ -174,12 +174,12 @@ public class UserAction extends BaseAction implements ModelDriven<User> {
 	}
 	
 	/**
-	 * 进入角色分配页面
+	 * Entry the page of Role Assignment
 	 * @return
 	 * @throws Exception
 	 */
 	public String torole() throws Exception {
-		//1.根据id, 得到用户对象
+		//1.Get the user object based on ID 根据id, 得到用户对象
 		User obj = userService.get(User.class, model.getId());
 		//2.将对象保存到值栈中
 		super.push(obj);
@@ -187,36 +187,36 @@ public class UserAction extends BaseAction implements ModelDriven<User> {
 		//3.调用角色的业务方法,得到角色列表
 		List<Role> roleList = roleService.find("from Role", Role.class, null);
 		
-		//4.将roleList放入值栈
+		//4.将roleList放入值栈 放入了context中
 		super.put("roleList", roleList);
 		
-		//5.得到当前用户的角色列表
+		//5.得到当前用户的角色列表, 以便一会在页面中勾选前显示
 		Set<Role> roleSet = obj.getRoles();
 		StringBuilder sb = new StringBuilder();
 		for(Role role: roleSet) {
 			sb.append(role.getName()).append(",");  //管理员,船运经理,
 		}
 		
-		//6.当前用户的角色字符串放入值栈中
+		//6.当前用户的角色字符串放入值栈中, 但是值栈的栈顶只有一个, 所以
+		//在一个方法中, 对栈顶的操作只有一次,但键值对可以有很多; 其他的可以作为键值对,放入context
 		super.put("roleStr", sb.toString());
 		
 		return "torole";
 	}
 	
 	/**
-	 * 实现角色分配
+	 * Role Assignment 实现角色分配
 	 * 	<input type="hidden" name="id" value="${id}"/>   是用户的id       ----model.id
 	 * 
 	 * <input type="checkbox" name="roleIds" value="4028a1c34ec2e5c8014ec2ebf8430001" class="input">
 	 * <input type="checkbox" name="roleIds" value="4028a1cd4ee2d9d6014ee2df4c6a0001" class="input">
 	 * 
-	 * 
 	 */
-	private String role() throws Exception{
-		//1.根据用户的id,得到对象
+	public String role() throws Exception{
+		//1. Get the user based on the id根据用户的id,得到对象
 		User obj = userService.get(User.class, model.getId());
 		
-		//2.有哪些角色?只要遍历roleIds, 就知道了
+		//2. the user's roles? 有哪些角色?只要遍历roleIds, 就知道了
 		Set<Role> roles = new HashSet<>();     //当前选中的角色列表
 		for(String id: roleIds) {
 			Role role = roleService.get(Role.class, id);
@@ -231,7 +231,6 @@ public class UserAction extends BaseAction implements ModelDriven<User> {
 		
 		//5.跳页面
 		return "alist";
-
 	}
 	
 	private String[]  roleIds;     //保存角色的列表

@@ -5,8 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<title></title>
-	<style type="text/css">
-	   span{display: inline-block;width: 200px}
+	<style type="text/css">    
+	   span{display: inline-block;width: 200px}         <!--注意这里, 是对列表样式的调整-->
 	</style>
 </head>
 
@@ -31,7 +31,7 @@
   <div class="textbox-header">
   <div class="textbox-inner-header">
   <div class="textbox-title">
-    用户 [${userinfo.name}] 角色列表
+    User [${userinfo.name}] Role List
   </div> 
   </div>
   </div>
