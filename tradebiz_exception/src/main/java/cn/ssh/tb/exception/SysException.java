@@ -12,6 +12,4 @@ public class SysException extends Exception {
 		return message;
 	}
 	
-	
-	
 }

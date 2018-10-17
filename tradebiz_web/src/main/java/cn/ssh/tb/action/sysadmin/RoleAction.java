@@ -180,7 +180,9 @@ public class RoleAction extends BaseAction implements ModelDriven<Role> {
 	/**
 	 * 为了使用zTree树, 就要组织好zTree树所使用的json数据
 	 * json数据结构如下:
-	 * [{"id":"模块的id","pId":"父模块的id","name":",模块名","checked":"true|false"}]
+	 * [{"id":"模块的id","pId":"父模块的id","name":",模块名","checked":"true|false"},
+	 * {"id":"模块的id","pId":"父模块的id","name":",模块名","checked":"true|false"}
+	 * ]
 	 * 
 	 * 常用的json插件有哪些?
 	 * json-lib     fastjson     struts-json-plugin-xxx.jar   手动拼接
@@ -199,7 +201,7 @@ public class RoleAction extends BaseAction implements ModelDriven<Role> {
 		//3.加载出所有的模块列表
 		List<Module> moduleList = moduleService.find("from Module", Module.class, null);
 		int size = moduleList.size();
-		//4.组织json串
+		//4.组织json串       不用fastjson等第三方工具的转换, 因为: 中间要判断;
 		StringBuilder sb = new StringBuilder();
 		sb.append("[");
 		for(Module module:moduleList) {
@@ -220,8 +222,6 @@ public class RoleAction extends BaseAction implements ModelDriven<Role> {
 			}
 		}
 		
-		
-		
 		sb.append("]");
 		
 		//5.得到response对象
@@ -234,7 +234,6 @@ public class RoleAction extends BaseAction implements ModelDriven<Role> {
 		
 		//7.返回NONE
 		return NONE;
-		
 	}
 	
 	/**

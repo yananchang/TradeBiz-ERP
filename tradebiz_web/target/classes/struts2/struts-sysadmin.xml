@@ -8,6 +8,7 @@
 	<constant name="struts.devMode" value="true" />
 	<constant name="struts.i18n.encoding" value="UTF-8" />
 
+    <!-- 继承的是"default",考虑的是要使用有exception的配置 -->
 	<package name="sysadmin" namespace="/sysadmin" extends="default">
 		<action name="deptAction_*" class="deptAction" method="{1}">
 			<result name="list">/WEB-INF/pages/sysadmin/dept/jDeptList.jsp</result>

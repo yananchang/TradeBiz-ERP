@@ -76,7 +76,7 @@
   <div class="textbox-header">
   <div class="textbox-inner-header">
   <div class="textbox-title">
-    配置 [${name}] 角色的模块  
+    Configure modules of the role [${name}]  
   </div> 
   </div>
   </div>

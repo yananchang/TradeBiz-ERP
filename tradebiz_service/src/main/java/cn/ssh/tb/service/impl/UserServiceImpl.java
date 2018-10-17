@@ -54,7 +54,7 @@ public class UserServiceImpl implements UserService {
 			entity.setId(id);      //基于主键的一对一, 说明两个表的id都是一个            user table & user info table, one-to-one, use same primary key
 			entity.getUserinfo().setId(id);
 			
-			//补Shiro添加后的bug
+			//补Shiro添加后新增用户时没有密码输入的bug
 			entity.setPassword(Encrypt.md5(SysConstant.DEFAULT_PASS,entity.getUserName()));
 			
 			baseDao.saveOrUpdate(entity);  //记录保存
