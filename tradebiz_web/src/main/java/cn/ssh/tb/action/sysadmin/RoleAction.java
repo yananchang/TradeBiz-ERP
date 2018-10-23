@@ -24,7 +24,7 @@ import cn.ssh.tb.utils.Page;
  *
  */
 public class RoleAction extends BaseAction implements ModelDriven<Role> {
-	//模型驱动
+	//模型驱动 model driven
 	private Role model = new Role();
 	public Role getModel() {
 		return model;
